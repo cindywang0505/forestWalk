@@ -1,0 +1,12 @@
+{
+  "name": "fieldtrip_v4_remove_canvases_2023_12_15_06_19_46",
+  "version": "1.0.0",
+  "description": "",
+  "package":"module",
+  "main": "p5.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

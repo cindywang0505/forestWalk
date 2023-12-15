@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "Space Mono";
+  src: url("SpaceMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("SpaceMono-Bold.ttf") format("truetype");
+  font-weight: bold;
+  
+}
+
+html,
+body {
+   font-family: "Space Mono", monospace;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+#world {
+  margin: auto; /* Center horizontally */
+}
+
+canvas {
+  display: block;
+}
+
+#canvas-holder {
+  position: relative;
+}
+
+#basket {
+  width: 400px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: relative;
+}
+
+#magic {
+  width: 190px;
+  height: 200px;
+  border: 1px solid black;
+  margin-top: 10px;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+#container {
+  display: flex;
+  align-items: center; /* Vertically center the items */
+}
+
+#basketLabel {
+  font-family: "Space Mono", monospace;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  z-index: -1;
+}
+
+#magicLabel {
+  font-family: "Space Mono", monospace;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  z-index: -1;
+}
+
+#saveBasketButton {
+  display: block; /* Ensure the button is a block element */
+  margin: 10px 0; /* Add some margin for spacing */
+}
+
+#capturedState {
+  background: red;
+  border: 5px solid black; /* For visibility */
+  padding: 10px;
+  margin-bottom: 20px; /* Spacing at the bottom */
+  display: block;
+}
+
+#infoButton {
+  position: absolute;
+
+  bottom: 10px;
+
+  right: 10px;
+}

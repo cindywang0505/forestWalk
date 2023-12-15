@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Baskets</title>
+  <style>
+    .basket-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .basket {
+      width: 400px;
+      height: 200px;
+      border: 1px solid black;
+      margin: 10px;
+      position: relative;
+    }
+    .word {
+      position: absolute;
+      cursor: default;
+    }
+  </style>
+</head>
+<body>
+  <div id="basketContainer" class="basket-container"></div>
+
+  <script>
+    fetch('/allBaskets')
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(basketData => {
+          const basketDiv = document.createElement('div');
+          basketDiv.className = 'basket';
+
+          basketData.words.forEach(wordData => {
+            const wordDiv = document.createElement('div');
+            wordDiv.className = 'word';
+            wordDiv.innerText = wordData.word;
+            wordDiv.style.top = wordData.position.top;
+            wordDiv.style.left = wordData.position.left;
+            basketDiv.appendChild(wordDiv);
+          });
+
+          document.getElementById('basketContainer').appendChild(basketDiv);
+        });
+      })
+      .catch(error => console.error('Error:', error));
+  </script>
+</body>
+</html>
